@@ -1,4 +1,4 @@
-module github.com/kiwisheets/gqlgencs
+module github.com/maxtroughear/gqlgencs
 
 go 1.15
 
