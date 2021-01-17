@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Yamashou/gqlgenc/clientgen"
-	clientconfig "github.com/Yamashou/gqlgenc/config"
+	"github.com/maxtroughear/gqlgenc/clientgen"
+	clientconfig "github.com/maxtroughear/gqlgenc/config"
 
 	"github.com/99designs/gqlgen/api"
 	"github.com/99designs/gqlgen/codegen/config"
