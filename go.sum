@@ -40,6 +40,8 @@ github.com/mattn/go-isatty v0.0.8/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hd
 github.com/mattn/go-isatty v0.0.12/go.mod h1:cbi8OIDigv2wuxKPP5vlRcQ1OAZbq2CE4Kysco4FUpU=
 github.com/maxtroughear/gqlgenc v0.0.0-20210117100838-4eccc0cc402c h1:r9OAImgG14vMoiODwEfeGWQnwefFxP4nYK4rWI7EK0o=
 github.com/maxtroughear/gqlgenc v0.0.0-20210117100838-4eccc0cc402c/go.mod h1:8u0Iv5eO3cWeCBSqR8Az13p7glQwAFu4R0+Uzv/xSC8=
+github.com/maxtroughear/gqlgenc v0.0.1 h1:+TGhACIjzAY1DWy9bdfguCbc1J+uWXEETklVpwfo0h8=
+github.com/maxtroughear/gqlgenc v0.0.1/go.mod h1:8u0Iv5eO3cWeCBSqR8Az13p7glQwAFu4R0+Uzv/xSC8=
 github.com/mitchellh/mapstructure v0.0.0-20180203102830-a4e142e9c047 h1:zCoDWFD5nrJJVjbXiDZcVhOBSzKn3o9LgRLLMRNuru8=
 github.com/mitchellh/mapstructure v0.0.0-20180203102830-a4e142e9c047/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
 github.com/opentracing/basictracer-go v1.0.0/go.mod h1:QfBfYuafItcjQuMwinw9GhYKwFXS9KnPs5lxoYwgW74=

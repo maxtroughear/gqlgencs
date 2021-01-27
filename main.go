@@ -5,10 +5,12 @@ import (
 	"os"
 
 	"github.com/maxtroughear/gqlgenc/clientgen"
+	"github.com/maxtroughear/gqlgenc/clientgenv2"
 	clientconfig "github.com/maxtroughear/gqlgenc/config"
 
 	"github.com/99designs/gqlgen/api"
 	"github.com/99designs/gqlgen/codegen/config"
+	"github.com/99designs/gqlgen/plugin"
 )
 
 func main() {
@@ -17,14 +19,23 @@ func main() {
 		fmt.Fprintln(os.Stderr, "failed to load config", err.Error())
 		os.Exit(2)
 	}
-	clientConfig, err := clientconfig.LoadConfig("gqlgenc.yml")
+	clientConfig, err := clientconfig.LoadConfigFromDefaultLocations()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "failed to load config", err.Error())
 		os.Exit(2)
 	}
 
-	clientPlugin := clientgen.New(clientConfig.Query, clientConfig.Client, clientConfig.Generate)
-	err = api.Generate(cfg,
+	var clientPlugin plugin.Plugin
+
+	clientPlugin = clientgen.New(clientConfig.Query, clientConfig.Client, clientConfig.Generate)
+	if clientConfig.Generate != nil {
+		if clientConfig.Generate.ClientV2 {
+			clientPlugin = clientgenv2.New(clientConfig.Query, clientConfig.Client, clientConfig.Generate)
+		}
+	}
+
+	err = api.Generate(
+		cfg,
 		api.AddPlugin(clientPlugin),
 	)
 	if err != nil {
